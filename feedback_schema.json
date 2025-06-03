@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FeedbackClassification",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "Bug",
+        "Feature Request",
+        "Usability Issue",
+        "Content Suggestion",
+        "Other"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High", "Critical"]
+    },
+    "product": {
+      "type": "string",
+      "enum": [
+        "Marketplace",
+        "Training Center",
+        "Client & Patient Resources"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["New", "Needs Review", "In Backlog", "Done"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "category",
+    "severity",
+    "product",
+    "assign_to_backlog",
+    "status",
+    "notes"
+  ],
+  "additionalProperties": false
+}
