@@ -3,6 +3,14 @@
   "title": "FeedbackClassification",
   "type": "object",
   "properties": {
+    "title": {
+      "type": "string",
+      "description": "The feedback title."
+    },
+    "theme": {
+      "type": "string",
+      "description": "Short label grouping feedback."
+    },
     "category": {
       "type": "string",
       "enum": [
@@ -15,31 +23,23 @@
     },
     "severity": {
       "type": "string",
-      "enum": ["Low", "Medium", "High", "Critical"]
+      "enum": ["Low","Medium","High","Critical"]
     },
     "product": {
       "type": "string",
-      "enum": [
-        "Marketplace",
-        "Training Center",
-        "Client & Patient Resources"
-      ]
+      "enum": ["Marketplace","Training Center","Client & Patient Resources"]
     },
     "status": {
       "type": "string",
-      "enum": ["New", "Needs Review", "In Backlog", "Done"]
+      "enum": ["New","Needs Review","In Backlog","Done"]
     },
     "notes": {
-      "type": "string"
+      "type": "string",
+      "description": "Any extra free‑text notes."
     }
   },
   "required": [
-    "category",
-    "severity",
-    "product",
-    "assign_to_backlog",
-    "status",
-    "notes"
+    "title","theme","category","severity","product","status","notes"
   ],
   "additionalProperties": false
 }
